@@ -27,25 +27,35 @@ window.addEventListener('scroll', function() {
     }
 });
 
-
-const button = document.querySelectorAll('.btn');
-const section = document.querySelectorAll('.hidden');
-let isHidden = true; 
-
 function toggleContent(button) {
-    const section = button.nextElementSibling;
-    
-    section.classList.toggle('hidden');
-    
-    button.classList.toggle('active');
+    const hiddenDiv = button.parentElement.nextElementSibling;
+
+    hiddenDiv.classList.toggle("active");
+
+    button.classList.toggle("active");
 }
 
-const buttons = document.querySelectorAll('.btn');
-buttons.forEach(button => {
-    button.addEventListener('click', function() {
-        toggleContent(this);
-    });
-});
+
+
+
+// const button = document.querySelectorAll('.btn');
+// const section = document.querySelectorAll('.hidden');
+// let isHidden = true; 
+
+// function toggleContent(button) {
+//     const section = button.nextElementSibling;
+    
+//     section.classList.toggle('hidden');
+    
+//     button.classList.toggle('active');
+// }
+
+// const buttons = document.querySelectorAll('.btn');
+// buttons.forEach(button => {
+//     button.addEventListener('click', function() {
+//         toggleContent(this);
+//     });
+// });
 
 // // const button = document.querySelector('.btn');
 // // const section = document.querySelector('.hidden');
